@@ -1,0 +1,9 @@
+a) cut -d"k" -f1 *.dat | sort -n
+b) cut -d" " -f2 *.dat | sort -n -r
+#read the first and second integer with cut and sorted them with the sort command
+c) if [[ $(cut -f1 -d"k" elephant.dat) > $(cut -f1 -d"k" hippopotamus.dat) ]]; then echo elephant is heavier; else echo hippopotamus is heavier; fi
+#compared two weights with the > operator and a if statement after extracting it with the cut command. printing the correct result with echo
+d) echo "$(($(cut -f1 -d"k" crocodile.dat)+2))k$(cut -f2 -d"k" crocodile.dat)">crocodile.dat 
+#reads the weight with cut adds the weight to it with th e+ operator, adds the removed k, adds back the rest of the file with and rewrite the crocodile.dat file with >
+e) rm giraffe.*
+# deletes all the giraffe files with rm
